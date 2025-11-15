@@ -12,7 +12,7 @@ import SystemTesting from "./components/system-testing/SystemTesting"
 
 function App() {
   return (
-    <div className=" w-full h-full bg-linear-to-r from-slate-50 to-cyan-50 p-6">
+    <div className=" w-full h-full ">
       <Routes>
         <Route path="/" element={ <Home/>}>
         <Route path="/" element={ <Features/> }/>
