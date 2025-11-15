@@ -15,7 +15,7 @@ function Dashboard() {
   const [activeId, setActiveId] = useState("1");
 
   return (
-    <div className="flex justify-center py-4 px-10 flex-col gap-14 w-full ">
+    <div className="flex justify-center py-8 px-20 flex-col gap-14 w-full  bg-linear-to-r from-slate-50 to-cyan-50 ">
       <div className="text-center max-w-4xl mx-auto space-y-3">
         <h1 className="text-4xl font-bold text-[#0F172B]">
           Ethiopian Water Monitoring Center
