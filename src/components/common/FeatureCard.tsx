@@ -2,6 +2,7 @@ import { CircleCheckBig } from "lucide-react"
 import { ReactNode } from "react"
 import { Button } from "../ui/button"
 import ProgressBar from "./ProgressBar"
+import { useNavigate } from "react-router-dom"
 
 type FeatureCardProps = {
   icon: ReactNode,
@@ -13,6 +14,32 @@ type FeatureCardProps = {
 }
 
 function FeatureCard({ icon: Icon, name, description, status, upTime, lastUpdate }: FeatureCardProps) {
+  const navigate=useNavigate()
+const handleClick = () => {
+  switch (name) {
+    case "Real-Time Monitoring":
+      navigate("/monitoring");
+      break;
+    case "Geospatial APIs":
+      navigate("/geospatial");
+      break;
+    case "AI Forecasting":
+      navigate("/ai-forecasting");
+      break;
+    case "Early Warning System":
+      navigate("/early-warning");
+      break;
+    case "Community Platform":
+      navigate("/community");
+      break;
+    case "Administrative Dashboard":
+      navigate("/admin-dashboard");
+      break;
+    default:
+      console.warn('');
+  }
+};
+
   return (
     <>
       <div className="border  shadow rounded-xl p-6 h-auto w-full bg-ice-blue flex flex-col  gap-6 hover:shadow-lg cursor-default">
@@ -39,7 +66,7 @@ function FeatureCard({ icon: Icon, name, description, status, upTime, lastUpdate
         <p>Last updated:</p>
         <span className="">{lastUpdate}</span>
       </div>
-      <Button className="bg-inherit border shadow hover:bg-[#8B5CF6] hover:text-white text-deep-teal">
+      <Button onClick={handleClick} className="bg-inherit border shadow hover:bg-[#8B5CF6] hover:text-white text-deep-teal">
       Access System
       </Button>
       </div>
