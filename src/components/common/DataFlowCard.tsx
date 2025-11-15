@@ -12,7 +12,7 @@ function DataFlowCard({ name, status }: DataFlowCardProps) {
 
       <div className="flex justify-between space-y-">
         <ul>
-          <li className=" text-slate-purple">{name}</li>
+          <li className=" text-deep-teal">{name}</li>
         </ul>
         <button className={`${status === 'Active' || status === 'Passed'
           ? 'bg-[#D0FAE4] ' : 'bg-[#CEFAFE]'} text-[#006044] py-0.5 px-2 text-xs rounded-md flex items-center `}>{status === 'Passed' ?
