@@ -56,15 +56,15 @@ const handleClick = () => {
           <p className="text-deep-teal font-semibold">Status:</p>
           <span className="bg-[#D0FAE5] py-0.5 px-3 font-normal text-xs text-center text-slate-purple rounded-md">{status}</span>
         </div>
-         <div className="flex justify-between text-sm text-slate-purple">
+         <div className="flex justify-between text-sm text-deep-teal">
         <p>Uptime</p>
         <span className="font-medium">{upTime}%</span>
       </div>
       {/* pogressbar */}
       <ProgressBar width={upTime}/>
-      <div className="flex justify-between text-slate-purple text-sm">
-        <p>Last updated:</p>
-        <span className="">{lastUpdate}</span>
+      <div className="flex justify-between  text-sm">
+        <p className="text-slate-purple">Last updated:</p>
+        <span className="text-deep-teal">{lastUpdate}</span>
       </div>
       <Button onClick={handleClick} className="bg-inherit border shadow hover:bg-[#8B5CF6] hover:text-white text-deep-teal">
       Access System
