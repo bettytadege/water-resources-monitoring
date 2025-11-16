@@ -17,8 +17,6 @@ function SystemCard({ icon: Icon, title, value, borderColor, statusColor, subtit
         <div
             className={`bg-ice-blue flex flex-col gap-6 w-full h-[153px] py-6 px-7 shadow border rounded-xl border-l-4 b `}
             style={{ borderLeftColor: borderColor }}
-            // style={{ borderLeftColor: "#FF0000" }}
-
         >
             <div className="flex justify-between">
                 <p className="text-deep-teal font-medium text-sm">{title}</p>
