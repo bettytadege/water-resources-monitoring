@@ -8,7 +8,7 @@ type SystemCardProps = {
     icon: LucideIcon | IconType,
     borderColor: string,
     statusColor?: string,
-    subtitle: string
+    subtitle?: string
 }
 
 function SystemCard({ icon: Icon, title, value, borderColor, statusColor, subtitle }: SystemCardProps) {
