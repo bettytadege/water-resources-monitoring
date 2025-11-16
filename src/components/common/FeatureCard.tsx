@@ -67,7 +67,7 @@ const handleClick = () => {
         <p className="text-slate-purple">Last updated:</p>
         <span className="text-deep-teal">{lastUpdate}</span>
       </div>
-      <Button onClick={handleClick} className="bg-inherit border shadow hover:bg-[#8B5CF6] hover:text-white text-deep-teal">
+      <Button onClick={handleClick} className="bg-inherit border shadow hover:bg-primary-purple hover:text-white text-deep-teal">
       Access System
       </Button>
       </div>
