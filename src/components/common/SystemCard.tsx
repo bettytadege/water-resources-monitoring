@@ -26,7 +26,7 @@ function SystemCard({ icon: Icon, title, value, borderColor, statusColor, subtit
             </div>
             <div className="space-y-1">
                 <p style={{ color: statusColor }} className={`text-2xl font-bold `}>{value}</p>
-                <p className="text-xs text-[#475569]">{subtitle}</p>
+                <p className="text-xs text-slate-purple">{subtitle}</p>
             </div>
         </div>
     )
