@@ -5,7 +5,7 @@ type SystemCardProps = {
     id?: number,
     title: string,
     value: any,
-    icon: ReactNode,
+    icon: LucideIcon | IconType,
     borderColor: string,
     statusColor?: string,
     subtitle: string
