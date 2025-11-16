@@ -11,7 +11,7 @@ type QuickAccessCard = {
 function QuickAccessCard({ icon: Icon, name, route }: QuickAccessCard) {
   const navigate = useNavigate()
   return (
-    <div onClick={() => navigate(route)} className='border border-gray-300 flex flex-col items-center gap-2 justify-center bg-inherit h-20 font-medium w-full rounded-md hover:bg-[#8B5CF6] group '>
+    <div onClick={() => navigate(route)} className='border border-gray-300 flex flex-col items-center gap-2 justify-center bg-inherit h-20 font-medium w-full rounded-md hover:bg-primary-purple group '>
       <Icon className="text-sky-blue" size={18} />
       <p className="text-deep-teal text-xs group-hover:text-white">{name}</p>
 
