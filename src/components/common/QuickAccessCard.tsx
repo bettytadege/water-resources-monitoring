@@ -1,8 +1,9 @@
-import { ReactNode } from "react"
+import { LucideIcon } from "lucide-react"
+
 import { useNavigate } from "react-router-dom"
 
 type QuickAccessCard = {
-  icon: ReactNode,
+  icon: LucideIcon,
   name: string,
   route: string,
 }
