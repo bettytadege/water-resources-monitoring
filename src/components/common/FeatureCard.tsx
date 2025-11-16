@@ -1,11 +1,12 @@
-import { CircleCheckBig } from "lucide-react"
-import { ReactNode } from "react"
+import { CircleCheckBig, LucideIcon } from "lucide-react"
+
 import { Button } from "../ui/button"
 import ProgressBar from "./ProgressBar"
 import { useNavigate } from "react-router-dom"
+import { IconType } from "react-icons"
 
 type FeatureCardProps = {
-  icon: ReactNode,
+  icon: LucideIcon | IconType,
   name: string,
   description: string,
   status: string,
