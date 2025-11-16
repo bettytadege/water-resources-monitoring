@@ -4,7 +4,7 @@ import { PiWarningBold } from "react-icons/pi"
 function WaterLevelAlertCard() {
     return (
         <>
-            <div className="border border-[#e7c3cc] bg-[#FCF3F5] rounded-md py-4 px-3 ">
+            <div className="border border-[#e7c3cc] bg-[#FCF3F5] rounded-md p-3 ">
                 <div className="flex gap-4 items-start">
                     <PiWarningBold className="text-[#BE123c] w-4" fontWeight={600} />
                     <div>
