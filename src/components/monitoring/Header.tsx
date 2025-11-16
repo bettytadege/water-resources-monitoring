@@ -6,7 +6,8 @@ import { Satellite } from "lucide-react"
 
 function Header() {
   return (
-    <div className="flex justify-between">
+    <>
+    <div className="flex justify-between items-center ">
         <div className="flex items-center gap-4">
             <div className="bg-[#E7EDEF] rounded-md w-12 h-12 flex items-center justify-center">
                 <Fire />
