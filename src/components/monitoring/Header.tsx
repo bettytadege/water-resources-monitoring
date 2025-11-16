@@ -17,11 +17,14 @@ function Header() {
                 <span className="text-sm">Ethiopian Space Science & Geospatial Institute</span>
             </div>
         </div>
+        {/* buttons */}
         <div className="flex gap-5">
             <Button className="bg-inherit border hover:bg-inherit  border-deep-teal text-deep-teal"><BsActivity />Live Data</Button>
             <Button  className="bg-inherit border hover:bg-deep-teal hover:text-white  text-slate-purple"><Satellite/>Satellite View</Button>
         </div>
     </div>
+     
+     </>
   )
 }
 
