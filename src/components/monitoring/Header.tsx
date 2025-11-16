@@ -17,7 +17,7 @@ function Header() {
             </div>
         </div>
         <div className="flex gap-5">
-            <Button className="bg-inherit border hover:bg-inherit py-0 border-deep-teal text-deep-teal"><BsActivity />Live Data</Button>
+            <Button className="bg-inherit border hover:bg-inherit  border-deep-teal text-deep-teal"><BsActivity />Live Data</Button>
             <Button  className="bg-inherit border hover:bg-deep-teal hover:text-white  text-slate-purple"><Satellite/>Satellite View</Button>
         </div>
     </div>
