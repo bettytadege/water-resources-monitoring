@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { ReactNode } from "react"
+import { LucideIcon } from "lucide-react"
+import { IconType } from "react-icons"
 
 type SystemCardProps = {
     id?: number,
