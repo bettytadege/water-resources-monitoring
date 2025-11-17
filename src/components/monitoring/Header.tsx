@@ -9,7 +9,7 @@ function Header() {
     <>
     <div className="flex justify-between items-center bg-white/20 backdrop-blur-md ">
         <div className="flex items-center gap-4">
-            <div className="bg-[#E7EDEF] rounded-md w-12 h-12 flex items-center justify-center">
+            <div className="bg-[#E7EDEF] rounded-md size-12 flex items-center justify-center">
                 <Fire />
             </div>
             <div className="text-slate-purple">
