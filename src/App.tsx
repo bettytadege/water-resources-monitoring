@@ -8,6 +8,7 @@ import AiForecasting from "./pages/AiForecasting"
 import EarlyWarning from "./pages/EarlyWarning"
 import SystemTesting from "./components/system-testing/SystemTesting"
 import WaterLevelDashboard from "./components/monitoring/overview/WaterLevelDashboard"
+import SensorNetwork from "./components/monitoring/sensor-network/SensorNetwork"
 
 
 
@@ -22,6 +23,7 @@ function App() {
         </Route>
         <Route path="/monitoring" element={ <Monitoring/> }>
         <Route path="" element={ <WaterLevelDashboard/> }/>
+        <Route path="sensor-network" element={ <SensorNetwork/> }/>
         </Route>
         <Route path="/geospatial" element={ <GeoSpatial/> }/>
         <Route path="/ai-forecasting" element={ <AiForecasting/> }/>
