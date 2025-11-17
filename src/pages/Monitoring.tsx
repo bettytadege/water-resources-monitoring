@@ -11,7 +11,7 @@ const actionBarElements = [
   { id: "4", name: "Ai Forecasting", route: "/monitoring/overview" },
 ];
 function Monitoring() {
-   const [activeId, setActiveId] = useState("1");
+  const [activeId, setActiveId] = useState("1");
   return (
     <>
       <div className="bg-white">
