@@ -17,8 +17,8 @@ function SystemTesting() {
                     <IntegrationTestCard />
                 </div>
                 <div className="flex gap-4 w-full">
-                    <Button className="bg-deep-teal hover:bg-[#165a73] text-white flex-1">Run Full Test Suite</Button>
-                    <Button className="bg-inherit border shadow text-slate-purple flex-1 hover:bg-primary-purple hover:text-white duration-100 transition-all">Generate Test Report</Button>
+                    <Button className="bg-deep-teal hover:bg-[#165a73] py-2 text-white flex-1">Run Full Test Suite</Button>
+                    <Button className="bg-inherit border shadow text-slate-purple py-2 flex-1 hover:bg-primary-purple hover:text-white duration-100 transition-all">Generate Test Report</Button>
                 </div>
                 <ResultSummary />
             </div>
