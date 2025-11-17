@@ -7,7 +7,8 @@ import { Satellite } from "lucide-react"
 function Header() {
   return (
     <>
-    <div className="flex justify-between items-center bg-white/20 backdrop-blur-md ">
+    <div className="space-y-6 bg-white/20 backdrop-blur-md ">
+    <div className="flex justify-between items-center px-6 py-4">
         <div className="flex items-center gap-4">
             <div className="bg-[#E7EDEF] rounded-md size-12 flex items-center justify-center">
                 <Fire />
@@ -24,7 +25,8 @@ function Header() {
             <Button  className="bg-inherit border hover:bg-deep-teal py-2 hover:text-white  text-slate-purple"><Satellite/>Satellite View</Button>
         </div>
     </div>
-     
+      <hr className="w-full border-neutral-300 " />
+     </div>
      </>
   )
 }
