@@ -1,7 +1,10 @@
 
 import {  Thermometer, Activity, Cloud } from "lucide-react";
 import { FaWater } from "react-icons/fa";
-import StatCard from "./StatCard";
+import StatCard from "./card/StatCard";
+import RegionalDistribution from "./RegionalDistribution";
+import WaterLevelTrend from "./WaterLevelTrend";
+import ReserviorStatus from "./ReserviorStatus";
 
 const statsData = [
   {
@@ -46,12 +49,17 @@ const statsData = [
 function WaterLevelDashboard() {
   return (
     <>
-    <div className="w-full ">
+    <div className="w-full space-y-8">
     <div className="grid lg:grid-cols-4 gap-6 md:grid-cols-2 grid-cols-1">
         {statsData.map((data,key)=>(
             <StatCard change={data.change} icon={data.icon} iconBgColor={data.iconBgColor} key={key} textColor={data.textColor} iconColor={data.iconColor} value={data.value} title={data.title}/>
         ))}
     </div>
+    <div className="flex gap-5">
+        <div className="flex-1">  <WaterLevelTrend /></div>
+        <div className="flex-1"> <RegionalDistribution/></div>
+    </div>
+    <ReserviorStatus/>
     </div>
     
     </>
