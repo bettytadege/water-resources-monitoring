@@ -15,10 +15,10 @@ function Monitoring() {
   return (
     <>
       <div className="bg-white">
-      <div className="sticky top-0  p-5">
-      <Header />
-  </div>
-        <hr className="w-full border-neutral-300 " />
+        <div className="sticky top-0  p-">
+          <Header />
+        </div>
+        {/* <hr className="w-full border-neutral-300 " /> */}
         <div className="m-6 flex-col flex gap-5">
           <WaterLevelAlertCard />
           <div className="bg-[#F7F9FB] w-full rounded-lg  h-10 py-1 flex flex-row justify-around  ">
