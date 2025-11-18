@@ -20,7 +20,7 @@ function ReserviorStatusCard({ name, status, level }: ReserviorStatusCardProps) 
                         </div>
                         {/* <div className=""> */}
                         <p className="text-deep-teal text-lg font-semibold">{name}</p>
-                        <Button className={`${status === 'low' ? 'bg-deep-teal' : status === 'normal' ? 'bg-primary-purple' : 'bg-[#BE123c]'} text-white px-2 rounded-sm text-xs py-0.5`}>{status}</Button>
+                        <Button className={`${status === 'low' ? 'bg-deep-teal' : status === 'normal' ? 'bg-primary-purple' : 'bg-dark-red'} text-white px-2 rounded-sm text-xs py-0.5`}>{status}</Button>
                         {/* </div> */}
                     </div>
                     <div className=" flex items-center gap-4" >
