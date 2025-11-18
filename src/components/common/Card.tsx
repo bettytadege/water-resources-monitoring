@@ -1,5 +1,5 @@
 type CardProps={
-    value:string,
+    value:string | number,
     bgColor:string,
     title:string,
     textColor:string
