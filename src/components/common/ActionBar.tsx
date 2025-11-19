@@ -20,7 +20,7 @@ function ActionBar({  name, route, isActive, onActivate }: ActionBarProps) {
   return (
     <div
       onClick={handleClick}
-      className={`cursor-pointer text-sm text-center transition-all duration-150 lg:px-3 py-1 mx- md:text-base rounded-sm border w-ful flex-1
+      className={`cursor-pointer text-sm text-center transition-all duration-150 lg:px-3 py-1   rounded-sm border  flex-1
       ${isActive ? "bg-white shadow border-slate-300 " : "bg-transparent border-transparent text-deep-teal"}
       `}>
       {name}
