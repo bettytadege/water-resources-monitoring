@@ -6,9 +6,9 @@ import { Outlet } from "react-router-dom";
 
 const actionBarElements = [
   { id: "1", name: "Overview", route: "/monitoring" },
-  { id: "2", name: "Satellite Data", route: "/monitoring/overview" },
+  { id: "2", name: "Satellite Data", route: "/monitoring/satellite-data" },
   { id: "3", name: "Sensor Network", route: "/monitoring/sensor-network" },
-  { id: "4", name: "Ai Forecasting", route: "/monitoring/overview" },
+  { id: "4", name: "Ai Forecasting", route: "/monitoring/ai-forecasting" },
 ];
 function Monitoring() {
   const [activeId, setActiveId] = useState("1");
