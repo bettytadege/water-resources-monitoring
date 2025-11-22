@@ -11,7 +11,7 @@ import SensorNetwork from "./components/monitoring/sensor-network/SensorNetwork"
 import AiForecasting from "./components/monitoring/ai-forecasting/AiForecasting"
 import AiForecastingDashboard from "./pages/AiForecastingDashboard"
 import SatelliteData from "./components/monitoring/satellite-data/SatelliteData"
-import WatershedVisualization from "./components/Geospatial/watersheds/WatershedVisualization"
+import Watersheds from "./components/Geospatial/watersheds/Watersheds"
 
 
 
@@ -34,7 +34,7 @@ function App() {
         </Route>
         {/* geospatial route */}
         <Route path="/geospatial" element={ <GeoSpatial/> }>
-        <Route path="" element={ <WatershedVisualization/> }/>
+        <Route path="" element={ <Watersheds/> }/>
         </Route>
         {/* ai forecasting route */}
         <Route path="/ai-forecasting" element={ <AiForecastingDashboard/> }/>
