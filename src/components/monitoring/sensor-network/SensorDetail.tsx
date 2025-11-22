@@ -1,9 +1,10 @@
+import CardContainer from "@/components/common/CardContainer"
 import { MapPin } from "lucide-react"
 
 
 function SensorDetail() {
   return (
-     <div className="border shadow bg-ice-blue rounded-xl p-6  w-full ">
+<CardContainer>
         <div>
           <p className="text-deep-teal font-semibold">Sensor Details</p>
           <span className="text-slate-purple text-sm">Click a sensor on the map</span>
@@ -12,7 +13,7 @@ function SensorDetail() {
           <MapPin size={50}/>
           <p>Select a sensor on the map to view details</p>
         </div>
-    </div>
+   </CardContainer>
   )
 }
 
