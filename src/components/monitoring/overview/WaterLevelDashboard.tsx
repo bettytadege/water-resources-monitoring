@@ -56,8 +56,8 @@ function WaterLevelDashboard() {
         ))}
     </div>
     <div className="flex gap-5">
-        <div className="flex-1">  <WaterLevelTrend /></div>
-        <div className="flex-1"> <RegionalDistribution/></div>
+         <WaterLevelTrend />
+        <RegionalDistribution/>
     </div>
     <ReserviorStatus/>
     </div>
