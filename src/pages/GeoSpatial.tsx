@@ -4,10 +4,10 @@ import { Outlet } from "react-router-dom";
 
 const actionBarElements = [
   { id: "1", name: "Watersheds", route: "/geospatial" },
-  { id: "2", name: " Routing", route: "/monitoring/satellite-data" },
-  { id: "3", name: " Geocoding", route: "/monitoring/sensor-network" },
-  { id: "4", name: "Aquifers", route: "/monitoring/ai-forecasting" },
-  { id: "5", name: "Intrgration", route: "/monitoring/ai-forecasting" },
+  { id: "2", name: " Routing", route: "/geospatial/routing" },
+  { id: "3", name: " Geocoding", route: "/geospatial/geocoding" },
+  { id: "4", name: "Aquifers", route: "/geospatial/aquifers" },
+  { id: "5", name: "Intrgration", route: "/geospatial/integration" },
 ];
 function GeoSpatial() {
     const [activeId, setActiveId] = useState("1");
