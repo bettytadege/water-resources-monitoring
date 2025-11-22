@@ -34,8 +34,10 @@ function GeoSpatial() {
               />
             ))}
           </div>
-          
+          <div className="mt-9">
+
           <Outlet/>
+          </div>
        
     </div>
     </>
