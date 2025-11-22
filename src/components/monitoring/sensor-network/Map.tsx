@@ -1,10 +1,11 @@
 import { Select, SelectContent, SelectGroup, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import img from "@/assets/images/map.png";
+import CardContainer from "@/components/common/CardContainer";
 
 
 function Map() {
   return (
-    <div className="border shadow bg-ice-blue rounded-xl p-6 space-y-4 w-full  ">
+   <CardContainer>
      
       <div className="flex justify-between items-center">
         <div>
@@ -42,7 +43,7 @@ function Map() {
       <div className="w-full h-[500px]">
         <img src={img} alt="Sensor Map" className="rounded-md w-full h-full object-cover" />
       </div>
-    </div>
+   </CardContainer>
   );
 }
 

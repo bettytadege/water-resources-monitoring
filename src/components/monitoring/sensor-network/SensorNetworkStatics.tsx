@@ -1,4 +1,5 @@
 import Card from "@/components/common/Card"
+import CardContainer from "@/components/common/CardContainer"
 
 const staticsData=[
   
@@ -31,7 +32,7 @@ const staticsData=[
 
 function SensorNetworkStatics() {
   return (
-    <div className="bg-ice-blue rounded-xl border shadow p-6 space-y-5">
+   <CardContainer>
          <div>
           <p className="text-deep-teal font-semibold">Sensor Network Statistics</p>
           <span className="text-slate-purple text-sm">Overall network health and performance metrics</span>
@@ -41,7 +42,7 @@ function SensorNetworkStatics() {
             <Card key={key} value={item.value} bgColor={item.bgColor} title={item.title} textColor={item.textColor}/>
         ))}
      </div>
-    </div>
+   </CardContainer>
   )
 }
 
