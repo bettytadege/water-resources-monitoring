@@ -4,6 +4,7 @@ import waterhsedpng from '@//assets/images/landsat-satellite-imagery-of-ethiopia
 import { Button } from "@/components/ui/button"
 import { RxZoomIn } from "react-icons/rx"
 import { MdOutlineFileDownload } from "react-icons/md"
+import { Select, SelectContent, SelectGroup, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 
 function WatershedVisualization() {
   return (
@@ -18,6 +19,32 @@ function WatershedVisualization() {
             <p className="text-slate-purple text-sm">Interactive watershed boundaries and water bodies</p>
           </div>
           {/* select */}
+          <Select defaultValue="landsat-8">
+            <SelectTrigger className="w-[120px] h-8 border bg-inherit text-slate-purple flex justify-between items-center px-2 rounded">
+              <SelectValue placeholder="Select layer" />
+            </SelectTrigger>
+            <SelectContent className="w-[120px] mt-2 text-slate-purple text-sm bg-white rounded-md">
+              <SelectGroup>
+                <SelectItem
+                  value="landsat-8"
+                  className="py-2 px-3 rounded data-highlighted:bg-primary-purple data-highlighted:text-white">
+                  Landsat-8
+                </SelectItem>
+                <SelectItem
+                  value="satellite"
+                  className="py-2 px-3 rounded data-highlighted:bg-primary-purple data-highlighted:text-white"
+                >
+                  Satellite
+                </SelectItem>
+                <SelectItem
+                  value="terrain"
+                  className="py-2 px-3 rounded data-highlighted:bg-primary-purple data-highlighted:text-white"
+                >
+                  Terrain
+                </SelectItem>
+              </SelectGroup>
+            </SelectContent>
+          </Select>
         </div>
         <div className=" bg-muted h-[330px] relative">
           <div className="flex flex-col gap-2 absolute right-4 top-5 ">
