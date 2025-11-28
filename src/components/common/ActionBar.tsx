@@ -5,15 +5,14 @@ type ActionBarProps = {
   name: string;
   route: string;
   isActive: boolean;
-  onActivate: () => void;
 };
 
-function ActionBar({  name, route, isActive, onActivate }: ActionBarProps) {
+function ActionBar({  name, route, isActive }: ActionBarProps) {
   const navigate = useNavigate();
   console.log('is active:',name,isActive)
 
   const handleClick = () => {
-    onActivate();
+    // onActivate();
     navigate(route);
   };
 
