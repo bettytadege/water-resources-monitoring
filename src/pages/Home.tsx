@@ -1,8 +1,7 @@
 import ActionBar from "@/components/common/ActionBar";
 import Footer from "@/components/footer/Footer";
 import SystemOverview from "@/components/system-overview/SystemOverview";
-import { useState } from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 
 
 const actionBarElements = [
@@ -12,7 +11,12 @@ const actionBarElements = [
 ];
 
 function Dashboard() {
-  const [activeId, setActiveId] = useState("1");
+const location=useLocation()
+let  activeId='1'
+const result=actionBarElements.find((item=> location.pathname === item.route))
+if(result){
+  activeId=result.id
+}
 
   return (
     <div className="flex justify-center py-8 px-20 flex-col gap-14 w-full  bg-linear-to-r from-slate-50 to-cyan-50 ">
@@ -37,7 +41,7 @@ function Dashboard() {
             route={item.route}
             id={item.id}
             isActive={activeId === item.id}
-            onActivate={() => setActiveId(item.id)}
+           
           />
         ))}
       </div>
