@@ -1,8 +1,7 @@
 import ActionBar from "@/components/common/ActionBar"
 import Header from "@/components/monitoring/Header"
 import WaterLevelAlertCard from "@/components/monitoring/WaterLevelAlertCard"
-import { useState } from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 
 const actionBarElements = [
   { id: "1", name: "Overview", route: "/monitoring" },
@@ -11,14 +10,20 @@ const actionBarElements = [
   { id: "4", name: "Ai Forecasting", route: "/monitoring/ai-forecasting" },
 ];
 function Monitoring() {
-  const [activeId, setActiveId] = useState("1");
+ 
+   const location = useLocation();
+  console.log('current location', location);
+ let activeId ='1'
+ const result= actionBarElements.find((item) => location.pathname === item.route);
+   if(result){
+    activeId=result.id
+   }
   return (
     <>
       <div className="bg-white">
-        <div className="sticky top-0  p-">
+        <div className="sticky top-0">
           <Header />
         </div>
-        {/* <hr className="w-full border-neutral-300 " /> */}
         <div className="m-6 flex-col flex gap-5">
           <WaterLevelAlertCard />
           <div className="bg-[#F7F9FB] w-full rounded-lg  h-10 py-1 flex flex-row justify-around  ">
@@ -29,7 +34,7 @@ function Monitoring() {
                 route={item.route}
                 id={item.id}
                 isActive={activeId === item.id}
-                onActivate={() => setActiveId(item.id)}
+                
               />
             ))}
           </div>
