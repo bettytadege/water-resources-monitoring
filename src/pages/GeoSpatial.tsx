@@ -1,6 +1,5 @@
 import ActionBar from "@/components/common/ActionBar"
-import { useState } from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 
 const actionBarElements = [
   { id: "1", name: "Watersheds", route: "/geospatial" },
@@ -9,37 +8,50 @@ const actionBarElements = [
   { id: "4", name: "Aquifers", route: "/geospatial/aquifers" },
   { id: "5", name: "Intrgration", route: "/geospatial/integration" },
 ];
+
 function GeoSpatial() {
-    const [activeId, setActiveId] = useState("1");
+  const location = useLocation();
+  console.log('current location', location);
+ let activeId ='1'
+ const result= actionBarElements.find((item) => location.pathname === item.route);
+   if(result){
+    activeId=result.id
+   }
+  
+  // actionBarElements.forEach((item) => {
+  //   if (location.pathname.startsWith(item.route)) {
+  //     activeId = item.id;
+  //   }
+  // });
+  console.log('active route id', activeId);
+
   return (
     <>
-    <div className="mx-24 my-8 space-y-4">
-      <div className="text-slate-purple text-center">
-      <h1 className="text-3xl font-bold  ">
-          Geospatial API Infrastructure
-        </h1>
-        <p>
-          AmbaLay Maps APIs for hydrological mapping, routing, and system integration
-        </p>
+      <div className="mx-24 my-8 space-y-4">
+        <div className="text-slate-purple text-center">
+          <h1 className="text-3xl font-bold  ">
+            Geospatial API Infrastructure
+          </h1>
+          <p>
+            AmbaLay Maps APIs for hydrological mapping, routing, and system integration
+          </p>
         </div>
-       <div className="bg-[#F7F9FB] w-full rounded-lg  h-10 py-1 flex flex-row justify-around  ">
-            {actionBarElements.map((item) => (
-              <ActionBar
-                key={item.id}
-                name={item.name}
-                route={item.route}
-                id={item.id}
-                isActive={activeId === item.id}
-                onActivate={() => setActiveId(item.id)}
-              />
-            ))}
-          </div>
-          <div className="mt-9">
+        <div className="bg-[#F7F9FB] w-full rounded-lg  h-10 py-1 flex flex-row justify-around  ">
+          {actionBarElements.map((item) => (
+            <ActionBar
+              key={item.id}
+              name={item.name}
+              route={item.route}
+              id={item.id}
+              isActive={activeId === item.id}
 
-          <Outlet/>
-          </div>
-       
-    </div>
+            />
+          ))}
+        </div>
+        <div className="mt-9">
+          <Outlet />
+        </div>
+      </div>
     </>
   )
 }
