@@ -1,6 +1,6 @@
 import CardContainer from "@/components/common/CardContainer"
 import { LuLayers } from "react-icons/lu"
-import waterhsedpng from '@//assets/images/landsat-satellite-imagery-of-ethiopian-watersheds-.png'
+// import waterhsedpng from '@/assets/images/landsat-satellite-imagery-of-ethiopian-watersheds-.png'
 import { Button } from "@/components/ui/button"
 import { RxZoomIn } from "react-icons/rx"
 import { MdOutlineFileDownload } from "react-icons/md"
@@ -41,7 +41,7 @@ function WatershedVisualization() {
               <li>Avg Elevation: 2,000m</li>
             </ul>
           </div>
-          <img src={waterhsedpng} alt="" className="object-cover rounded-lg w-full h-full" />
+          {/* <img src={waterhsedpng} alt="" className="object-cover rounded-lg w-full h-full" /> */}
           
         </div>
       </CardContainer>
