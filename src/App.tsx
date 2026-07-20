@@ -13,6 +13,7 @@ import AiForecastingDashboard from "./pages/AiForecastingDashboard"
 import SatelliteData from "./components/monitoring/satellite-data/SatelliteData"
 import Watersheds from "./components/Geospatial/watersheds/Watersheds"
 import Routing from "./components/Geospatial/routing/Routing"
+import Geocoding from "./components/Geospatial/geocoding/Geocoding"
 
 
 
@@ -37,6 +38,7 @@ function App() {
         <Route path="/geospatial" element={ <GeoSpatial/> }>
         <Route path="" element={ <Watersheds/> }/>
         <Route path="routing" element={ <Routing/> }/>
+        <Route path="geocoding" element={ <Geocoding/> }/>
         </Route>
         {/* ai forecasting route */}
         <Route path="/ai-forecasting" element={ <AiForecastingDashboard/> }/>
