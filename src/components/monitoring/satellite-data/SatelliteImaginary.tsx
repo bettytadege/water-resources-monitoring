@@ -3,16 +3,14 @@ import { LuRefreshCcw } from "react-icons/lu";
 import { Button } from "@/components/ui/button";
 import { RxZoomIn } from "react-icons/rx";
 import { MdOutlineFileDownload } from "react-icons/md";
-import {
-  Select,
-  SelectTrigger,
-  SelectValue,
-  SelectContent,
-  SelectGroup,
-  SelectItem,
-} from "@/components/ui/select";
 import CardContainer from "@/components/common/CardContainer";
+import SelectField from "@/components/common/SelectField";
 
+const satelliteSelectOption = [
+  { label: "Landsat-8", value: "landSat-8" },
+  { label: "Satellite", value: "satellite" },
+  { label: "Terrain", value: "terrain" },
+];
 function SatelliteImaginary() {
   return (
    
@@ -24,41 +22,13 @@ function SatelliteImaginary() {
             Real-time satellite data from multiple sources
           </span>
         </div>
-
         <div className="flex gap-3">
-          <Select defaultValue="landsat-8">
-            <SelectTrigger className="w-[120px] h-8 border bg-inherit text-slate-purple flex justify-between items-center px-2 rounded">
-              <SelectValue placeholder="Select layer" />
-            </SelectTrigger>
-            <SelectContent className="w-[120px] mt-2 text-slate-purple text-sm bg-white rounded-md">
-              <SelectGroup>
-                <SelectItem
-                  value="landsat-8"
-                  className="py-2 px-3 rounded data-highlighted:bg-primary-purple data-highlighted:text-white">
-                  Landsat-8
-                </SelectItem>
-                <SelectItem
-                  value="satellite"
-                  className="py-2 px-3 rounded data-highlighted:bg-primary-purple data-highlighted:text-white"
-                >
-                  Satellite
-                </SelectItem>
-                <SelectItem
-                  value="terrain"
-                  className="py-2 px-3 rounded data-highlighted:bg-primary-purple data-highlighted:text-white"
-                >
-                  Terrain
-                </SelectItem>
-              </SelectGroup>
-            </SelectContent>
-          </Select>
-
+           <SelectField item={satelliteSelectOption} defaultValue="landSat-8"/>
           <div className="bg-white border border-gray-300 rounded-md hover:text-white hover:bg-primary-purple w-12  flex justify-center items-center">
             <LuRefreshCcw />
           </div>
         </div>
       </div>
-
       <div className="w-full h-[500px]">
         <img
           src={img}
